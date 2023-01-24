@@ -20,7 +20,7 @@ module "my_new_workspace" {
 
   terraform_version = var.terraform_version
 
-  environments = []
+  environments = ["dev", "test"]
 
   trigger_prefixes = ["./module"]
 
