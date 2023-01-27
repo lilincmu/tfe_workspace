@@ -20,7 +20,7 @@ resource "tfe_workspace" "workspace" {
 
   allow_destroy_plan = false
 
-  auto_apply = false
+  auto_apply = true
 
   #execution_mode = "remote"
   #operations = true
