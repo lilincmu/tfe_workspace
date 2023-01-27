@@ -6,6 +6,7 @@ variable "terraform_version" {}
 variable "vcs_oauth_token_id" {}
 variable "trigger_prefixes" {}
 variable "vcs_repoorg" {}
+variable "project_name" {}
 
 resource "tfe_workspace" "workspace" {
 
@@ -38,4 +39,10 @@ resource "tfe_workspace" "workspace" {
 
   trigger_prefixes = var.trigger_prefixes
 
+  project_id = tfe_project.proj.id
+}
+
+resource "tfe_project" "proj" {
+  organization = var.organization
+  name = var.project_name
 }

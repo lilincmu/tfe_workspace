@@ -3,6 +3,7 @@ variable "terraform_version" {} ## TFC version you would like to use(example: 0.
 variable "vcs_oauth_token_id" {} ## Your VCS Oauth token
 variable "vcs_repoorg" {}  ## Your VCS organization, where `different-repo` get forked
 variable "hostname" {}  ## Your TFE host name
+variable "project_name" {}
 
 module "my_new_workspace" {
 
