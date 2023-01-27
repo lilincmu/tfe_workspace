@@ -25,6 +25,7 @@ module "my_new_workspace" {
 
   trigger_prefixes = ["./module"]
 
+  project_name = var.project_name
 }
 
 provider "tfe" {
